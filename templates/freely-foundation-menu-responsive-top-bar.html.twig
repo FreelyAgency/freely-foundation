@@ -1,0 +1,19 @@
+
+<div class="title-bar" data-responsive-toggle="{{ top_bar_id }}" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle="{{ top_bar_id }}"></button>
+  <div class="title-bar-title">{{ mobile_menu_bar_title }}</div>
+</div>
+
+<div class="top-bar" id="{{ top_bar_id }}">
+  {% if top_bar_left is not empty %}
+    <div class="top-bar-left">
+      {{ top_bar_left }}
+    </div>
+  {% endif %}
+  
+  {% if top_bar_right is not empty %}
+    <div class="top-bar-right">
+      {{ top_bar_right }}
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,6 @@
+services:
+  freely_foundation.menu:
+    class: Drupal\freely_foundation\FreelyFoundationMenuService
+    arguments: ['@menu.link_tree']
+
+

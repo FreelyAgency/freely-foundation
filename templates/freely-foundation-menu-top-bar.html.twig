@@ -1,0 +1,14 @@
+
+<div class="top-bar" {% if top_bar_id %}id="{{ top_bar_id }}"{% endif %}>
+  {% if top_bar_left is not empty %}
+    <div class="top-bar-left">
+      {{ top_bar_left }}
+    </div>
+  {% endif %}
+  
+  {% if top_bar_right is not empty %}
+    <div class="top-bar-right">
+      {{ top_bar_right }}
+    </div>
+  {% endif %}
+</div>

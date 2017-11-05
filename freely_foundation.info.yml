@@ -1,0 +1,5 @@
+name: Freely Foundation
+type: module
+description: Helper function for Zurb Foundation integration with Drupal
+core: 8.x
+package: Custom

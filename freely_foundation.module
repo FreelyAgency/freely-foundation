@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Contains freely_foundation.module.
+ */
+use Drupal\freely_foundation\FreelyFoundationMenuService;
+
+/**
+ * Implements hook_theme().
+ */
+function freely_foundation_theme($existing, $type, $theme, $path) {
+  return [
+    FreelyFoundationMenuService::$FOUNDATION_THEME_DROPDOWN => array(
+      'variables' => array(
+        'menu_name' => NULL,
+        'items' => NULL,
+      ),
+    ),
+    FreelyFoundationMenuService::$FOUNDATION_THEME_DRILLDOWN => array(
+      'variables' => array(
+        'menu_name' => NULL,
+        'items' => NULL,
+      ),
+    ),
+    FreelyFoundationMenuService::$FOUNDATION_THEME_MEDIUM_DROPDOWN_SMALL_DRILLDOWN => array(
+      'variables' => array(
+        'menu_name' => NULL,
+        'items' => NULL,
+        'show_submenu_for_dropdown' => TRUE,
+      ),
+    ),
+    FreelyFoundationMenuService::$FOUNDATION_THEME_TOP_BAR => array(
+      'variables' => array(
+        'top_bar_id' => NULL,
+        'top_bar_left' => NULL,
+        'top_bar_right' => NULL,
+      ),
+    ),
+    FreelyFoundationMenuService::$FOUNDATION_THEME_ACCORDION => array(
+      'variables' => array(
+        'menu_name' => NULL,
+        'items' => NULL,
+      ),
+    ),
+    FreelyFoundationMenuService::$FOUNDATION_THEME_RESPONSIVE_TOP_BAR => array(
+      'variables' => array(
+        'top_bar_id' => NULL,
+        'top_bar_left' => NULL,
+        'top_bar_right' => NULL,
+        'mobile_menu_bar_title' => NULL,
+      ),
+    ),
+  ];
+}
