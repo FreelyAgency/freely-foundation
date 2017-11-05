@@ -12,16 +12,20 @@ use Drupal\Core\Menu\MenuTreeParameters;
 interface FreelyFoundationMenuServiceInterface {
 
   public function getMenuFoundationMenu($menu_machine_name, MenuTreeParameters $menu_parameters);
-  
+
   public function getMenuFoundationDropdown($menu_machine_name, MenuTreeParameters $menu_parameters);
-  
+
   public function getMenuFoundationDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters);
-  
+
   public function getMenuFoundationMediumDropdownSmallDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters, $show_submenu_for_dropdown = TRUE);
-  
+
   public function getMenuFoundationAccordion($menu_machine_name, MenuTreeParameters $menu_parameters);
-  
+
   public function getMenuTreeToRender($menu_machine_name, MenuTreeParameters $menu_parameters);
-  
+
   public function getMenuTree($menu_machine_name, MenuTreeParameters $menu_parameters);
+
+  public function getMenuFoundationTopBar($top_bar_left, $top_bar_right = NULL, $top_bar_id = NULL);
+
+  public function getMenuFoundationResponsiveTopBar($top_bar_left, $top_bar_id, $top_bar_right = NULL, $mobile_menu_bar_title = NULL);
 }
