@@ -51,5 +51,10 @@ function freely_foundation_theme($existing, $type, $theme, $path) {
         'mobile_menu_bar_title' => NULL,
       ),
     ),
+    FreelyFoundationMenuService::$FOUNDATION_THEME_STICKY => array(
+      'variables' => array(
+        'render_array' => NULL,
+      ),
+    ),
   ];
 }

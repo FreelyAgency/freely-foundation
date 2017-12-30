@@ -18,6 +18,7 @@ class FreelyFoundationMenuService implements FreelyFoundationMenuServiceInterfac
   static public $FOUNDATION_THEME_ACCORDION = 'freely_foundation_menu_accordion';
   static public $FOUNDATION_THEME_TOP_BAR = 'freely_foundation_menu_top_bar';
   static public $FOUNDATION_THEME_RESPONSIVE_TOP_BAR = 'freely_foundation_menu_responsive_top_bar';
+  static public $FOUNDATION_THEME_STICKY = 'freely_foundation_sticky';
   
   /**
    * Drupal\Core\Menu\MenuLinkTree definition.
@@ -113,6 +114,13 @@ class FreelyFoundationMenuService implements FreelyFoundationMenuServiceInterfac
   
   public function getMenuTree($menu_machine_name, MenuTreeParameters $menu_parameters) {
     return $this->menuLinkTree->load($menu_machine_name, $menu_parameters);
+  }
+
+  public function getSticky($render_array) {
+    return [
+      '#theme' => self::$FOUNDATION_THEME_STICKY,
+      '#render_array' => $render_array,
+    ];
   }
 
 }
