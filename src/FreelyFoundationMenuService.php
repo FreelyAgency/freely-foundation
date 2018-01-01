@@ -78,7 +78,7 @@ class FreelyFoundationMenuService implements FreelyFoundationMenuServiceInterfac
     return $menu_to_render;
   }
   
-  public function getMenuFoundationResponsiveTopBar($top_bar_left, $top_bar_id, $top_bar_right = NULL, $mobile_menu_bar_title = NULL) {
+  public function getMenuFoundationResponsiveTopBar($top_bar_left, $top_bar_id, $top_bar_right = NULL, $mobile_menu_bar_title = NULL, $toggle_breakpoint = 'medium') {
     // @TODO - add #cache property @see https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/group/theme_render/8.2.x
     $menu_to_render = [
       '#theme' => self::$FOUNDATION_THEME_RESPONSIVE_TOP_BAR,
@@ -86,6 +86,7 @@ class FreelyFoundationMenuService implements FreelyFoundationMenuServiceInterfac
       '#top_bar_right' => $top_bar_right,
       '#top_bar_id' => $top_bar_id,
       '#mobile_menu_bar_title' => $mobile_menu_bar_title,
+      '#toggle_breakpoint' => $toggle_breakpoint,
     ];
     
     return $menu_to_render;

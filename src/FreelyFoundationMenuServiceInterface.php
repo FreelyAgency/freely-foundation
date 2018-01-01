@@ -27,7 +27,7 @@ interface FreelyFoundationMenuServiceInterface {
 
   public function getMenuFoundationTopBar($top_bar_left, $top_bar_right = NULL, $top_bar_id = NULL);
 
-  public function getMenuFoundationResponsiveTopBar($top_bar_left, $top_bar_id, $top_bar_right = NULL, $mobile_menu_bar_title = NULL);
+  public function getMenuFoundationResponsiveTopBar($top_bar_left, $top_bar_id, $top_bar_right = NULL, $mobile_menu_bar_title = NULL, $toggle_breakpoint = 'medium');
 
   public function getSticky($render_array);
 }

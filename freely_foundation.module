@@ -49,6 +49,7 @@ function freely_foundation_theme($existing, $type, $theme, $path) {
         'top_bar_left' => NULL,
         'top_bar_right' => NULL,
         'mobile_menu_bar_title' => NULL,
+        'toggle_breakpoint' => 'medium',
       ),
     ),
     FreelyFoundationMenuService::$FOUNDATION_THEME_STICKY => array(
