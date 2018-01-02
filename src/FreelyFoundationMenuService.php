@@ -117,10 +117,12 @@ class FreelyFoundationMenuService implements FreelyFoundationMenuServiceInterfac
     return $this->menuLinkTree->load($menu_machine_name, $menu_parameters);
   }
 
-  public function getSticky($render_array) {
+  public function getSticky($render_array, $sticky_breakpoint = 'medium', $wrapper_classes = '') {
     return [
       '#theme' => self::$FOUNDATION_THEME_STICKY,
       '#render_array' => $render_array,
+      '#sticky_breakpoint' => $sticky_breakpoint,
+      '#wrapper_classes' => $wrapper_classes,
     ];
   }
 

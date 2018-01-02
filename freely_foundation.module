@@ -55,6 +55,8 @@ function freely_foundation_theme($existing, $type, $theme, $path) {
     FreelyFoundationMenuService::$FOUNDATION_THEME_STICKY => array(
       'variables' => array(
         'render_array' => NULL,
+        'sticky_breakpoint' => 'medium',
+        'wrapper_classes' => '',
       ),
     ),
   ];
