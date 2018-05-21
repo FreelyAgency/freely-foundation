@@ -19,6 +19,8 @@ interface FreelyFoundationMenuServiceInterface {
 
   public function getMenuFoundationMediumDropdownSmallDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters, $show_submenu_for_dropdown = TRUE);
 
+  public function getMenuFoundationLargeDropdownMediumDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters, $show_submenu_for_dropdown = TRUE);
+
   public function getMenuFoundationAccordion($menu_machine_name, MenuTreeParameters $menu_parameters);
 
   public function getMenuTreeToRender($menu_machine_name, MenuTreeParameters $menu_parameters);

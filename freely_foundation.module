@@ -30,6 +30,13 @@ function freely_foundation_theme($existing, $type, $theme, $path) {
         'show_submenu_for_dropdown' => TRUE,
       ),
     ),
+    FreelyFoundationMenuService::$FOUNDATION_THEME_LARGE_DROPDOWN_MEDIUM_DRILLDOWN => array(
+      'variables' => array(
+        'menu_name' => NULL,
+        'items' => NULL,
+        'show_submenu_for_dropdown' => TRUE,
+      ),
+    ),
     FreelyFoundationMenuService::$FOUNDATION_THEME_TOP_BAR => array(
       'variables' => array(
         'top_bar_id' => NULL,

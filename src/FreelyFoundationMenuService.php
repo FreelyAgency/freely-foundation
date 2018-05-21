@@ -15,6 +15,7 @@ class FreelyFoundationMenuService implements FreelyFoundationMenuServiceInterfac
   static public $FOUNDATION_THEME_DROPDOWN = 'freely_foundation_menu_dropdown';
   static public $FOUNDATION_THEME_DRILLDOWN = 'freely_foundation_menu_drilldown';
   static public $FOUNDATION_THEME_MEDIUM_DROPDOWN_SMALL_DRILLDOWN = 'freely_foundation_menu_medium_dropdown_small_drilldown';
+  static public $FOUNDATION_THEME_LARGE_DROPDOWN_MEDIUM_DRILLDOWN = 'freely_foundation_menu_large_dropdown_medium_drilldown';
   static public $FOUNDATION_THEME_ACCORDION = 'freely_foundation_menu_accordion';
   static public $FOUNDATION_THEME_TOP_BAR = 'freely_foundation_menu_top_bar';
   static public $FOUNDATION_THEME_RESPONSIVE_TOP_BAR = 'freely_foundation_menu_responsive_top_bar';
@@ -42,6 +43,14 @@ class FreelyFoundationMenuService implements FreelyFoundationMenuServiceInterfac
     $menu_to_render['#theme'] = self::$FOUNDATION_THEME_MEDIUM_DROPDOWN_SMALL_DRILLDOWN;
     $menu_to_render['#show_submenu_for_dropdown'] = $show_submenu_for_dropdown;
     
+    return $menu_to_render;
+  }
+
+  public function getMenuFoundationLargeDropdownMediumDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters, $show_submenu_for_dropdown = TRUE) {
+    $menu_to_render = $this->getMenuTreeToRender($menu_machine_name, $menu_parameters);
+    $menu_to_render['#theme'] = self::$FOUNDATION_THEME_LARGE_DROPDOWN_MEDIUM_DRILLDOWN;
+    $menu_to_render['#show_submenu_for_dropdown'] = $show_submenu_for_dropdown;
+
     return $menu_to_render;
   }
   
