@@ -2,5 +2,8 @@ services:
   freely_foundation.menu:
     class: Drupal\freely_foundation\FreelyFoundationMenuService
     arguments: ['@menu.link_tree']
+  freely_foundation.menu_tree_manipulators:
+    class: Drupal\freely_foundation\FreelyFoundationMenuLinkTreeManipulators
+    arguments: ['@access_manager', '@current_user', '@entity_type.manager', '@language_manager', '@entity.repository']
 
 
