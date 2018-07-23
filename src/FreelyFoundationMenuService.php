@@ -38,16 +38,16 @@ class FreelyFoundationMenuService implements FreelyFoundationMenuServiceInterfac
     // @TODO
   }
   
-  public function getMenuFoundationMediumDropdownSmallDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters = NULL, $show_submenu_for_dropdown = TRUE) {
-    $menu_to_render = $this->getMenuTreeToRender($menu_machine_name, $menu_parameters);
+  public function getMenuFoundationMediumDropdownSmallDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters = NULL, $show_submenu_for_dropdown = TRUE, $filter_by_current_Language = FALSE) {
+    $menu_to_render = $this->getMenuTreeToRender($menu_machine_name, $menu_parameters, $filter_by_current_Language);
     $menu_to_render['#theme'] = self::$FOUNDATION_THEME_MEDIUM_DROPDOWN_SMALL_DRILLDOWN;
     $menu_to_render['#show_submenu_for_dropdown'] = $show_submenu_for_dropdown;
     
     return $menu_to_render;
   }
 
-  public function getMenuFoundationLargeDropdownMediumDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters, $show_submenu_for_dropdown = TRUE) {
-    $menu_to_render = $this->getMenuTreeToRender($menu_machine_name, $menu_parameters);
+  public function getMenuFoundationLargeDropdownMediumDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters, $show_submenu_for_dropdown = TRUE, $filter_by_current_Language = FALSE) {
+    $menu_to_render = $this->getMenuTreeToRender($menu_machine_name, $menu_parameters, $filter_by_current_Language);
     $menu_to_render['#theme'] = self::$FOUNDATION_THEME_LARGE_DROPDOWN_MEDIUM_DRILLDOWN;
     $menu_to_render['#show_submenu_for_dropdown'] = $show_submenu_for_dropdown;
 
@@ -101,7 +101,7 @@ class FreelyFoundationMenuService implements FreelyFoundationMenuServiceInterfac
     return $menu_to_render;
   }
 
-    public function getMenuTreeToRender($menu_machine_name, MenuTreeParameters $menu_parameters = NULL) {
+    public function getMenuTreeToRender($menu_machine_name, MenuTreeParameters $menu_parameters = NULL, $filter_by_current_Language = FALSE) {
     if (!isset($menu_parameters)) {
       $menu_parameters = new MenuTreeParameters();
       $menu_parameters->onlyEnabledLinks();
@@ -116,7 +116,11 @@ class FreelyFoundationMenuService implements FreelyFoundationMenuServiceInterfac
       // Use the default sorting of menu links.
       ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
     ];
-    
+
+    if ($filter_by_current_Language) {
+      $manipulators[] = ['callable' => 'freely_foundation.menu_tree_manipulators:filterByCurrentLanguage'];
+    }
+
     $menu_tree = $this->menuLinkTree->transform($menu_tree, $manipulators);
     
     return $this->menuLinkTree->build($menu_tree);

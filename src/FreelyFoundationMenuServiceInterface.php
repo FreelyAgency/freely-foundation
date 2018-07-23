@@ -17,13 +17,13 @@ interface FreelyFoundationMenuServiceInterface {
 
   public function getMenuFoundationDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters);
 
-  public function getMenuFoundationMediumDropdownSmallDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters, $show_submenu_for_dropdown = TRUE);
+  public function getMenuFoundationMediumDropdownSmallDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters, $show_submenu_for_dropdown = TRUE, $filter_by_current_Language = FALSE);
 
-  public function getMenuFoundationLargeDropdownMediumDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters, $show_submenu_for_dropdown = TRUE);
+  public function getMenuFoundationLargeDropdownMediumDrilldown($menu_machine_name, MenuTreeParameters $menu_parameters, $show_submenu_for_dropdown = TRUE, $filter_by_current_Language = FALSE);
 
   public function getMenuFoundationAccordion($menu_machine_name, MenuTreeParameters $menu_parameters);
 
-  public function getMenuTreeToRender($menu_machine_name, MenuTreeParameters $menu_parameters);
+  public function getMenuTreeToRender($menu_machine_name, MenuTreeParameters $menu_parameters, $filter_by_current_Language = FALSE);
 
   public function getMenuTree($menu_machine_name, MenuTreeParameters $menu_parameters);
 
