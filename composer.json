@@ -1,5 +1,5 @@
 {
-  "name": "FreelyAgency/freely_foundation",
+  "name": "freely-agency/freely-foundation",
   "type": "drupal-module",
   "description": "Helper function for Zurb Foundation integration with Drupal",
   "keywords": ["Drupal"],
