@@ -4,8 +4,6 @@
   "description": "Helper function for Zurb Foundation integration with Drupal",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
-  "homepage": "https://www.drupal.org/project/freely_foundation",
-  "minimum-stability": "dev",
   "support": {
     "issues": "https://www.drupal.org/project/issues/freely_foundation",
     "source": "http://cgit.drupalcode.org/freely_foundation"
